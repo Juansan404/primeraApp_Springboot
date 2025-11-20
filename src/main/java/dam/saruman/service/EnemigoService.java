@@ -22,4 +22,8 @@ public class EnemigoService {
         }
         return enemigos;
     }
+
+    public Enemigo guardar(Enemigo enemigo){
+        return enemigoRepository.save(enemigo);
+    }
 }

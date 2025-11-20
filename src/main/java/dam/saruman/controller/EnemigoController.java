@@ -3,9 +3,7 @@ package dam.saruman.controller;
 import dam.saruman.entity.Enemigo;
 import dam.saruman.service.EnemigoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,5 +16,10 @@ public class EnemigoController {
     @GetMapping("/enemigo")
     public List<Enemigo> getEnemigos(){
         return enemigoService.obtenerEnemigos();
+    }
+
+    @PostMapping("/enemigo")
+    public Enemigo addEnemigo(@RequestBody Enemigo enemigo){
+        return  enemigoService.guardar(enemigo);
     }
 }
