@@ -26,4 +26,13 @@ public class EnemigoService {
     public Enemigo guardar(Enemigo enemigo){
         return enemigoRepository.save(enemigo);
     }
+
+    public void eliminar(Long id){
+        enemigoRepository.deleteById(id);
+    }
+
+    public Enemigo actualizar(Long id, Enemigo enemigo){
+        enemigo.setId(id);
+        return enemigoRepository.save(enemigo);
+    }
 }
