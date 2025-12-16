@@ -27,11 +27,11 @@ public class EnemigoService {
         return enemigoRepository.save(enemigo);
     }
 
-    public void eliminar(Long id){
+    public void eliminar(String id){
         enemigoRepository.deleteById(id);
     }
 
-    public Enemigo actualizar(Long id, Enemigo enemigo){
+    public Enemigo actualizar(String id, Enemigo enemigo){
         enemigo.setId(id);
         return enemigoRepository.save(enemigo);
     }

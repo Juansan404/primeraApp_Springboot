@@ -10,4 +10,4 @@ public class GestorOrdasSarumanApplication {
         SpringApplication.run(GestorOrdasSarumanApplication.class, args);
     }
 
-    }
+}

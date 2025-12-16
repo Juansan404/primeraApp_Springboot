@@ -24,12 +24,12 @@ public class EnemigoController {
     }
 
     @DeleteMapping("/enemigo/{id}")
-    public void deleteEnemigo(@PathVariable Long id){
+    public void deleteEnemigo(@PathVariable String id){
         enemigoService.eliminar(id);
     }
 
     @PutMapping("/enemigo/{id}")
-    public Enemigo updateEnemigo(@PathVariable Long id, @RequestBody Enemigo enemigo){
+    public Enemigo updateEnemigo(@PathVariable String id, @RequestBody Enemigo enemigo){
         return enemigoService.actualizar(id, enemigo);
     }
 }
